@@ -14,9 +14,23 @@ class TripsController < ApplicationController
     end
     
     def update
+        trip = Trip.find(params[:id])
+        trip.update(trip_params)
+        if trip.valid?
+            render json: trip
+        else
+            render json: trip.errors, status: 422
+        end        
     end
     
     def destroy
+        trip = Trip.find(params[:id])
+        trips = Trip.all
+        if trip.destroy
+            render json: trips
+        else
+            render json: trip.errors
+        end
     end
 
     private
