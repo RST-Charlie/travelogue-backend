@@ -1,5 +1,5 @@
 class Trip < ApplicationRecord
     belongs_to :user
 
-    validates :title, :entry, :country, :region, presence: true
+    validates :title, :entry, :country, :region, :user_id, presence: true
 end
