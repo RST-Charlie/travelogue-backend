@@ -50,5 +50,4 @@ RSpec.describe "Trips", type: :request do
             expect(json['region']).to eq("North America")
         end
     end
-    
 end
