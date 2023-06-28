@@ -73,11 +73,11 @@ seedTrips2 = [
 ]
 
 seedTrips.each do |trip|
-    user1.seedTrips.create(trip)
+    user1.trips.create(trip)
     p "creating: #{trip}"
 end
 
 seedTrips2.each do |trip|
-    user2.seedTrips2.create(trip)
+    user2.trips.create(trip)
     p "creating: #{trip}"
 end
